@@ -9,5 +9,13 @@ return {
     --     require("lsp_signature").setup()
     --   end,
     -- },
-    { "ellisonleao/gruvbox.nvim", priority = 1000 }, { "rebelot/kanagawa.nvim" }
+    { "ellisonleao/gruvbox.nvim", priority = 1000 }, { "rebelot/kanagawa.nvim" }, {
+    'uloco/bluloco.nvim',
+    lazy = false,
+    priority = 1000,
+    dependencies = { 'rktjmp/lush.nvim' },
+    config = function()
+        -- your optional config goes here, see below.
+    end
+}, "folke/tokyonight.nvim"
 }
