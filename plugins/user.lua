@@ -17,5 +17,5 @@ return {
     config = function()
         -- your optional config goes here, see below.
     end
-}, "folke/tokyonight.nvim"
+}, { "folke/tokyonight.nvim" }, { "EdenEast/nightfox.nvim" }, { "catppuccin/nvim", name = "catppuccin" },
 }
