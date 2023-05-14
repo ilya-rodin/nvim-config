@@ -9,13 +9,24 @@ return {
     --     require("lsp_signature").setup()
     --   end,
     -- },
-    { "ellisonleao/gruvbox.nvim", priority = 1000 }, { "rebelot/kanagawa.nvim" }, {
+    { "ellisonleao/gruvbox.nvim", priority = 1000, background = "dark" },
+    { "rebelot/kanagawa.nvim" }, {
     'uloco/bluloco.nvim',
     lazy = false,
     priority = 1000,
     dependencies = { 'rktjmp/lush.nvim' },
     config = function()
-        -- your optional config goes here, see below.
     end
-}, { "folke/tokyonight.nvim" }, { "EdenEast/nightfox.nvim" }, { "catppuccin/nvim", name = "catppuccin" },
+}, { "folke/tokyonight.nvim" }, { "EdenEast/nightfox.nvim" },
+    { "catppuccin/nvim",      name = "catppuccin" }, { "sainnhe/gruvbox-material" },
+    { "nordtheme/vim" }, {
+    "glepnir/lspsaga.nvim",
+    event = "LspAttach",
+    config = function() require("lspsaga").setup({}) end,
+    dependencies = {
+        { "nvim-tree/nvim-web-devicons" },
+        -- Please make sure you install markdown and markdown_inline parser
+        { "nvim-treesitter/nvim-treesitter" }
+    }
+}
 }
